@@ -1,0 +1,196 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #777;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#taskInput {
+  flex: 1;
+  min-width: 180px;
+}
+
+button {
+  background: #635bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex: 1;
+  min-width: 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #f7f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.stats p {
+  color: #555;
+}
+
+#taskList {
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+
+.task-info p {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.task.completed h3 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.task-actions button {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.edit-btn {
+  background: #f0ad4e;
+}
+
+.delete-btn {
+  background: #e74c3c;
+}
+
+.priority {
+  font-weight: bold;
+}
+
+.priority.High {
+  color: #e74c3c;
+}
+
+.priority.Medium {
+  color: #e0a000;
+}
+
+.priority.Low {
+  color: #28a745;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 15px;
+  background: #333;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .task {
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    flex-direction: column;
+  }
+
+  form > * {
+    width: 100%;
+  }
+}

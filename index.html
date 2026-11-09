@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>My Tasks ✨</h1>
+      <p>Organize your day, one task at a time.</p>
+    </header>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Add a new task..." required>
+
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <input type="date" id="dueDate">
+
+      <button type="submit" id="submitBtn">Add Task</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search tasks...">
+
+      <select id="filter">
+        <option value="all">All Tasks</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <div class="stats">
+      <p>Total: <span id="totalTasks">0</span></p>
+      <p>Completed: <span id="completedTasks">0</span></p>
+      <p>Pending: <span id="pendingTasks">0</span></p>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button id="clearBtn" class="clear-btn">
+      Clear Completed
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
